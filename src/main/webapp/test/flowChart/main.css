@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+html, body{background-color:#0ca4d4; overflow:hidden;}
+html, body,  h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  
+pre, form, fieldset, img, textarea, a {border:0 none;margin:0;padding:0;outline: 0;font-size: 12px; text-align:left; vertical-align: baseline;background: transparent; font-family:"\5FAE\8F6F\96C5\9ED1","\5B8B\4F53"; font-family:"微软雅黑"; }
+footer{position:absolute;
+	bottom:5%;
+	left:40%;
+	width:100%;}
+h1 {	font-size: 25px;}
+h2 {	font-size: 23px;}
+h3 {	font-size: 21px;}
+h4 {	font-size: 19px;}
+h5 {	font-size: 17px;}
+h6 {	font-size: 15px;}
+select{font-size:12px;font-family:simsun;}
+ul,ol,li{list-style-type:none}
+a {color:#4C4C4C;text-decoration:none; cursor:pointer; outline:none;/*FF标准去虚线框*/}
+a {star:expression(this.onFocus=this.blur()); /* for Ie*去虚线框*/ }
+a:hover{color:#FF6600;text-decoration:underline;}
+:focus {outline: none;}
+body {line-height: 1.5em;width: 100%; height:100%;display: table; font-size:12px; font-family:"微软雅黑",Arial, 'Liberation Sans', FreeSans, sans-serif, "宋体";}
+table {border: medium none;border-collapse: collapse;}
+td { padding-left: 5px;}
+caption, th, td {font-weight: normal;text-align: left;}
+table, td, th {vertical-align: middle;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+a img {border: none;outline: none;}
+ol {margin-left: 2em;}
+
+/*======================浮动==================*/
+.clear{clear:both;height:0px;overflow:hidden;}
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { zoom:1}
+.clearfix { display:block; }
+.bugfix{zoom:1}
+
+
+
+.header,.main-container,.footer {
+	margin:10px auto;
+	width:100%;
+}
+
+.header {
+	/* background-color: chocolate; */
+	background:url(images/titleRightBg.jpg) repeat-x;position:relative;
+	height:100px;
+}
+
+.footer {
+	background-color: blanchedalmond;
+	height:30px;
+	text-align:center;
+	clear:both;
+}
+
+.main-container {
+	background:#e5feff;
+	height:800px;
+}
+
+.sidebar {
+	background-color: #5c677b;
+	height:100%;
+	width:150px;
+	float:left;
+}
+
+.content {
+	background:#e5feff;
+	height:100%;
+	width:80%;
+	float:left;
+	margin-left:10px;
+}
+
+/* .breadcrums {
+	background-color:#EEEEEE;
+} */
+
+.main-content {
+	/* height:800px; */
+	height:90%;
+}
+

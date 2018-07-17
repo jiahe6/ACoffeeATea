@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #000;
+            border: 1px solid maroon;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<a href="#zhangsan">张三</a>
+<a href="#lisi">李四</a>
+<a href="#wangwu">王五</a>
+<div id="conment"></div>
+
+<!--ajax-own.js是自己封装的AJAX,你也可以直接引jq-->
+<script src="js/ajax-own.js"></script>
+<script>
+    //通过hashchange事件来监听hash值的变化，直接使用onhashchange也是一样
+    window.addEventListener('hashchange',function(){
+        //拿到#后面的字符，即是URL的锚部分
+        var hash = document.location.hash;
+        //通过判断不同的hash值，从而请求不同的数据来渲染页面
+        // 对switch不熟悉，使用if elseif  else 也是一样
+        switch (hash){
+            case '#zhangsan':
+                    //这里是我封装的AJAX
+                $.ajax({
+                    url:'./json/zhangsan.json',
+                    success:function(result){
+                       document.getElementById('conment').innerText = result[0].name;
+                    }
+                });
+            break;
+            case '#lisi':
+                $.ajax({
+                    url:'./json/lisi.json',
+                    success:function(result){
+                        document.getElementById('conment').innerText = result[0].name;
+                    }
+                });
+            break;
+            case '#wangwu':
+                $.ajax({
+                    url:'./json/wangwu.json',
+                    success:function(result){
+                        document.getElementById('conment').innerText = result[0].name;
+                    }
+                });
+            break;
+            default :
+                $.ajax({
+                    url:'./json/zhangsan.json',
+                    success:function(result){
+                        document.getElementById('conment').innerText = result[0].name;
+                    }
+                });
+        }
+    });
+</script>
+</body>
+</html>
